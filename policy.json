@@ -1,0 +1,53 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+          "Sid": "VisualEditor0",
+          "Effect": "Allow",
+          "Action": "logs:*",
+          "Resource": "arn:aws:logs:eu-west-1:*:log-group:*:log-stream:*"
+      },
+      {
+          "Sid": "VisualEditor1",
+          "Effect": "Allow",
+          "Action": [
+              "logs:DescribeQueries",
+              "logs:GetLogRecord",
+              "sqs:ListQueues",
+              "logs:PutDestinationPolicy",
+              "logs:StopQuery",
+              "logs:TestMetricFilter",
+              "logs:DeleteDestination",
+              "logs:DeleteQueryDefinition",
+              "logs:PutQueryDefinition",
+              "logs:GetLogDelivery",
+              "logs:ListLogDeliveries",
+              "logs:CreateLogDelivery",
+              "logs:DeleteResourcePolicy",
+              "logs:PutResourcePolicy",
+              "logs:DescribeExportTasks",
+              "logs:GetQueryResults",
+              "logs:UpdateLogDelivery",
+              "logs:CancelExportTask",
+              "logs:DeleteLogDelivery",
+              "logs:DescribeQueryDefinitions",
+              "logs:PutDestination",
+              "logs:DescribeResourcePolicies",
+              "logs:DescribeDestinations"
+          ],
+          "Resource": "*"
+      },
+        {
+            "Sid": "VisualEditor2",
+            "Effect": "Allow",
+            "Action": [
+                "logs:*",
+                "sqs:*"
+            ],
+            "Resource": [
+                "arn:aws:logs:eu-west-1:*:log-group:*",
+                "arn:aws:sqs:*:*:interview"
+            ]
+        }
+    ]
+}
